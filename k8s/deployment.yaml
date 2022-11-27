@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: k8s-in-notion
+  name: k8s-in-notion
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-in-notion
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: k8s-in-notion
+    spec:
+      serviceAccountName: view
+      containers:
+        - image: ko://github.com/julianfbeck/k8s-in-notion
+          name: tmp
+          resources: {}
+          env:
+            - name: NOTION_SECRET
+              value: "secret_1zMZe1qnj5tKrAGe2gPk6sd5yqX0HKR1MkDwbHwY00Q"
+            - name: IN_CLUSTER
+              value: "true"
+status: {}
