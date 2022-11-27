@@ -24,7 +24,7 @@ spec:
           resources: {}
           env:
             - name: NOTION_SECRET
-              value: "secret_1zMZe1qnj5tKrAGe2gPk6sd5yqX0HKR1MkDwbHwY00Q"
+              value: "YOUR_NOTION_SECRET"
             - name: IN_CLUSTER
               value: "true"
 status: {}
