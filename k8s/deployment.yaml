@@ -25,6 +25,8 @@ spec:
           env:
             - name: NOTION_SECRET
               value: "YOUR_NOTION_SECRET"
+            - name: NOTION_PARENT_PAGE_ID
+              value: "YOUR_NOTION_PARENT_PAGE_ID"
             - name: IN_CLUSTER
               value: "true"
 status: {}

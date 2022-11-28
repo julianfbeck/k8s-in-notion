@@ -26,7 +26,7 @@ func UpdateDatabase(client *notion.Client, databaseID string, properties *notion
 
 }
 
-func CreateDatabase(client *notion.Client) notion.Database {
+func CreateDatabase(client *notion.Client, parentPageId string) notion.Database {
 	database, err := client.CreateDatabase(context.Background(), notion.CreateDatabaseParams{
 		Title: []notion.RichText{
 			{
@@ -36,7 +36,7 @@ func CreateDatabase(client *notion.Client) notion.Database {
 				},
 			},
 		},
-		ParentPageID: "06336be68e0b4278999eb22c6b461a26",
+		ParentPageID: parentPageId,
 		Properties: notion.DatabaseProperties{
 			"Name": notion.DatabaseProperty{
 				Type:  "title",

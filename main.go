@@ -11,9 +11,10 @@ import (
 )
 
 func main() {
-	notion_secret := os.Getenv("NOTION_SECRET")
-	notionClient := notiondb.CreateClient(notion_secret)
-	database := notiondb.CreateDatabase(notionClient)
+	NOTION_SECRET := os.Getenv("NOTION_SECRET")
+	NOTION_PARENT_PAGE_ID := os.Getenv("NOTION_PARENT_PAGE_ID")
+	notionClient := notiondb.CreateClient(NOTION_SECRET)
+	database := notiondb.CreateDatabase(notionClient, NOTION_PARENT_PAGE_ID)
 	k8sClient := kubernetes.CreateClient()
 
 	kubernetes.WatchForPods(k8sClient, func(p *v1.Pod, e watch.Event) {
