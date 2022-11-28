@@ -2,7 +2,7 @@
 ![example](https://raw.githubusercontent.com/julianfbeck/k8s-in-notion/main/media/example.gif)
 
 > Custom k8s dashboard in Notion using [Notion API](https://developers.notion.com/)
-
+> Read the [blog post](https://blog.julianbeck.com/posts/kubernetes-dashboard-in-notion/) for more details
 This is a POC to show how to create a kubernetes dashboard in Notion using the Notion API and the kubernetes-client to display the current pods inside the cluster.
 
 ## Installation
