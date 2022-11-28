@@ -10,7 +10,7 @@ create: ## Create dev cluster
 	kind create cluster --name k8s-notion --config=kind-config.yaml || true 
 .PHONY: delete
 delete: ## Create dev cluster
-	kind delete	cluster --name youtube-dl-cluster
+	kind delete	cluster --name k8s-notion
 
 ##@ deploy
 
